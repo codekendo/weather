@@ -1,0 +1,80 @@
+.wrapper {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.box {
+  background-color: #546E7A;
+  padding: 1em 1em;
+  opacity: .80;
+}
+
+h1 {
+  margin: .25em 0em;
+}
+
+.clearSkyNight {
+  background-image: url('../images/StockSnap_BZ1SJ93RX5.jpg');
+}
+
+.clearSkyDay {
+  background-image: url('../images/StockSnap_GKF942UMHC.jpg');
+}
+
+.fewCloudsDay {
+  background-image: url('../images/StockSnap_KK9KNIXXOR.jpg');
+}
+
+.fewCloudsNight {
+  background-image: url('../images/StockSnap_YM1V8KLYPK.jpg');
+}
+
+.scatteredCloudsDay {
+  background-image: url('../images/StockSnap_6YECHNHRSW.jpg');
+}
+
+.scatteredCloudsNight {
+  background-image: url('../images/StockSnap_F9A9BC32GG.jpg');
+}
+
+.brokenCloudsDay {
+  background-image: url('../images/StockSnap_EFIV4XJXAL.jpg');
+}
+
+.brokenCloudsNight {
+  background-image: url('../images/StockSnap_9E8I90U3S6.jpg');
+}
+
+.showerRainDay {
+  background-image: url('../images/StockSnap_5NCZ4GMIX7.jpg');
+}
+
+.showerRainNight {
+  background-image: url('../images/StockSnap_3E6O5228GU.jpg');
+}
+
+.rainNight {
+  background-image: url('../images/StockSnap_4T707MWBIF.jpg');
+}
+
+.rainDay {
+  background-image: url('../images/StockSnap_KU7VC6HZWJ.jpg');
+}
+
+.thunderstorm {
+  background-image: url('../images/StockSnap_XM2BU5FAKM.jpg');
+}
+
+.snow {
+  background-image: url('../images/  StockSnap_WH4RECMT4F.jpg');
+}
+
+.mist {
+  background-image: url('../images/StockSnap_UC9JF9LW0S.jpg');
+}
