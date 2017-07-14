@@ -7,9 +7,10 @@ function geoCall() {
     lon = "lon=" + position.coords.longitude;
     console.log(lat);
     console.log(lon);
-
+var url = 'https://fcc-weather-api.glitch.me/api/current?' + lat + '&' + lon;
+console.log(url);
     function getWeather() {
-      $.getJSON('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?' + lat + '&' + lon + '&units=imperial&APPID=7b0cd9647f367f2a3f378e918a66642d', function(data) {
+      $.getJSON(url, function(data) {
         //console.log(data.main.temp);
         $('.city').text(data.name)
         $('#temp').text(data.main.temp);
@@ -36,35 +37,23 @@ function geoCall() {
 
         //change the background to an image based on the id
 
-        if (data.weather[0].icon == '01d') {
+        if (data.weather[0].description == 'clear sky') {
           $('.wrapper').addClass('clearSkyDay')
-        } else if (data.weather[0].icon == '01n') {
-          $('.wrapper').addClass('clearSkyNight')
-        } else if (data.weather[0].icon == '02n') {
-          $('.wrapper').addClass('fewCloudsNight')
-        } else if (data.weather[0].icon == "02d") {
+        }   else if (data.weather[0].description == "few clouds") {
           $('.wrapper').addClass('fewCloudsDay')
-        } else if (data.weather[0].icon == '03n') {
-          $('.wrapper').addClass('scatteredCloudsNight')
-        } else if (data.weather[0].icon == '03d') {
+        }  else if (data.weather[0].description == 'scattered clouds') {
           $('.wrapper').addClass('scatteredCloudsDay')
-        } else if (data.weather[0].icon == '04d') {
+        } else if (data.weather[0].description == 'broken clouds') {
           $('.wrapper').addClass('brokenCloudsDay')
-        } else if (data.weather[0].icon == '04n') {
-          $('.wrapper').addClass('brokenCloudsNight')
-        } else if (data.weather[0].icon == '09d') {
+        } else if (data.weather[0].description == 'shower rain') {
           $('.wrapper').addClass('showerRainDay')
-        } else if (data.weather[0].icon == '09n') {
-          $('.wrapper').addClass('showerRainNight')
-        } else if (data.weather[0].icon == '10d') {
+        } else if (data.weather[0].description == 'rainy day') {
           $('.wrapper').addClass('rainDay')
-        } else if (data.weather[0].icon == '10n') {
-          $('.wrapper').addClass('rainNight')
-        } else if (data.weather[0].icon == '11d' || '11n') {
+        } else if (data.weather[0].description == 'thunderstorm') {
           $('.wrapper').addClass('thunderstorm')
-        } else if (data.weather[0].icon == '13d' || '13n') {
+        } else if (data.weather[0].description == 'snow') {
           $('.wrapper').addClass('snow')
-        } else if (data.weather[0].icon == '50d' || '50n') {
+        } else if (data.weather[0].description == 'mist') {
           $('.wrapper').addClass('mist')
         }
 
