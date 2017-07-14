@@ -9,7 +9,7 @@ function geoCall() {
     console.log(lon);
 
     function getWeather() {
-      $.getJSON('http://api.openweathermap.org/data/2.5/weather?' + lat + '&' + lon + '&units=imperial&APPID=7b0cd9647f367f2a3f378e918a66642d', function(data) {
+      $.getJSON('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?' + lat + '&' + lon + '&units=imperial&APPID=7b0cd9647f367f2a3f378e918a66642d', function(data) {
         //console.log(data.main.temp);
         $('.city').text(data.name)
         $('#temp').text(data.main.temp);
